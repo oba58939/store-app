@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #F5DEB3;
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+  }
+  .search-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  .search-container input {
+    width: 60%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .search-container button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #F5DEB3;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+  }
+  .search-container button:hover {
+    background-color:#F5DEB3;
+  }
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* カードの最小幅を150pxに設定 */
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .result-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .result-card img {
+    max-width: 100%; /* カード内で画像を縮小 */
+    height: auto;
+    max-height: 150px; /* 画像の高さを制限 */
+    border-radius: 4px;
+  }
+  .result-card h3 {
+    margin: 0.5rem 0;
+  }
+  .result-card p {
+    color: #555;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #F5DEB3;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  /* カード全体をリンクとしてクリック可能にするスタイル */
+  .result-card a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: inherit; /* リンクの文字色を親要素に合わせる */
+    display: block; /* カード全体をクリック可能に */
+  }
+  .result-card a:hover {
+    background-color: #f9f9f9; /* ホバー時に背景色を変更 */
+  }
