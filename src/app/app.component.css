@@ -5,7 +5,7 @@ body {
     padding: 0;
   }
   header {
-    background-color: #F5DEB3;
+    background-color: #f8f8f8;
     color: #000000;
     padding: 1rem;
     text-align: center;
@@ -22,13 +22,13 @@ body {
   .search-container button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #F5DEB3;
+    background-color: #f8f8f8;
     color: #000000;
     border: none;
     cursor: pointer;
   }
   .search-container button:hover {
-    background-color:#F5DEB3;
+    background-color:#f8f8f8;
   }
   .results {
     display: grid;
@@ -58,8 +58,8 @@ body {
   footer {
     text-align: center;
     padding: 1rem;
-    background-color: #F5DEB3;
-    color: white;
+    background-color: #f8f8f8;
+    color: #000000;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -73,3 +73,74 @@ body {
   .result-card a:hover {
     background-color: #f9f9f9; /* ホバー時に背景色を変更 */
   }
+
+
+  select option.main-category {
+    font-weight: bold; /* 強調表示（オプション） */
+  }
+  
+  select option.sub-category {
+    font-style: italic; /* イタリック表示（オプション） */
+  }
+
+  .center-button {
+    text-align: center; /* テキストやボタンを中央揃え */
+  }
+  
+/* ボタン全体を中央揃え */
+.center-button {
+  text-align: center;
+}
+
+/* 検索ボタンのスタイル */
+.search-button {
+  background-color: #6495ED; /* ピンク系のポップな背景色 */
+  color: white;             /* フォントカラーを白に設定 */
+  font-size: 24px;          /* フォントサイズを大きく */
+  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* ポップなフォント */
+  padding: 15px 30px;       /* ボタンの余白を大きく */
+  border: none;             /* ボーダーを消す */
+  border-radius: 10px;      /* ボタンを角丸に */
+  cursor: pointer;          /* ホバー時にカーソルをポインタに */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* ボタンに影を追加 */
+  transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+}
+
+/* ボタンをホバーしたときの効果 */
+.search-button:hover {
+  transform: scale(1.1); /* ボタンを少し拡大 */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5); /* 影を濃く */
+}
+  
+.bar {
+  background-color: #ffffff;
+  border: none; 
+  border-radius: 5px; 
+}
+/* 「游明朝」をフォントとして設定 */
+label, select, .search-button {
+  font-family: 'Yu Mincho', '游明朝', serif; /* 游明朝を指定 */
+}
+
+/* 追加: フォントを変更したボタンにも適用 */
+.search-button {
+  font-family: 'Yu Mincho', '游明朝', serif;
+}
+
+/* 明朝体、太字、大きめのサイズ、スタイリッシュなデザイン */
+.title {
+  font-family: 'Yu Mincho', '游明朝', serif; /* 明朝体 */
+  font-weight: bold; /* 太字 */
+  font-size: 36px;    /* 大きめのフォントサイズ */
+  text-align: center; /* 中央揃え */
+  color: #333333;     /* ダークグレーで落ち着いた印象 */
+  letter-spacing: 2px; /* 文字間隔を少し広げて、エレガントに */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 少し影をつけて立体感 */
+  margin-top: 20px;    /* 上部に余白を追加 */
+}
+
+/* ヘッダー全体にスタイルを加える（オプション） */
+header {
+  background-color: #f8f8f8; /* 背景色を薄いグレーに */
+  padding: 20px 0;           /* 上下に余白を追加 */
+}

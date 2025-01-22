@@ -2,39 +2,46 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
     <title>在庫管理システム</title>
   </head>
 
   <body>
   
   <header>
-    <h1>T書店 在庫管理システム</h1>
+    <h1 class="title">T書店 在庫管理システム</h1>
   </header>
   
   <div class="search-container">
-    <input type="text" placeholder="本のタイトルや著者名を入力してください" [(ngModel)]="keyword">
-    
-    <label for="janru">ジャンル選択:</label>
-    <select [(ngModel)]="selectedJanru" name="janru" required>
-      <option value=00>小説</option>
-      <option value=10>新書</option>
-      <option value=20>絵本</option>
-      <option value=30>漫画</option>
-      <option value=40>画集</option>
-      </select>
+    <input type="text" class="bar"placeholder="タイトルや著者名を入力してください" [(ngModel)]="keyword">
+
+    <label for="janru">商品選択:</label>
+<select [(ngModel)]="selectedProduct" name="product" required>
+  <!-- メインカテゴリ -->
+  <option value="a" class="main-category">書籍</option>
+  <option value="a00" class="sub-category">小説</option>
+  <option value="a10" class="sub-category">新書</option>
+  <option value="a20" class="sub-category">絵本</option>
+  <option value="a30" class="sub-category">漫画</option>
+  <option value="a40" class="sub-category">雑誌</option>
+  <option value="b" class="main-category">DVD/Blu-ray</option>
+  <option value="b10" class="sub-category">邦画</option>
+  <option value="b20" class="sub-category">洋画</option>
+  <option value="b30" class="sub-category">邦ドラマ</option>
+  <option value="c" class="main-category">その他</option>
+</select>
+  
+<label for="storeSelect">店舗を選択:</label>
+<select id="storeSelect" [(ngModel)]="selectedStore" (change)="onStoreSelect(selectedStore)">
+  <option *ngFor="let store of store" [value]="store.id">{{ store.name }}</option>
+</select>
+
+<p class="center-button">
+  <button type="button" class="search-button">検索</button>
+</p>
 
   </div>
-  <label for="storeSelect">店舗を選択:</label>
-  <select id="storeSelect" [(ngModel)]="selectedStore" (change)="onStoreSelect(selectedStore)">
-    <option *ngFor="let store of store" [value]="store.id">{{ store.name }}</option>
-  </select>
-
-  <div *ngIf="selectedStore">
-    <p>選択された店舗ID: {{ selectedStore }}</p>
-  </div>
-
-
+  
 <footer>
   <p>&copy; 2025 T書店</p>
 </footer>

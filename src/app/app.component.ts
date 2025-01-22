@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   keyword = '';
   store: { id: string, name: string }[] = [];  // 店舗情報を格納する配列
   selectedStore: string = '';  // 選択した店舗のID
-  selectedJanru: string = '';
+  selectedProduct: string = '';
 
   db: any;  // dbをクラスのプロパティとして宣言
 
