@@ -13,7 +13,7 @@
   </header>
   
   <div class="search-container">
-    <input type="text" class="bar"placeholder="タイトルや著者名を入力してください" [(ngModel)]="keyword">
+    <input [(ngModel)]="searchQuery" class="bar"placeholder="タイトルや著者名を入力してください">
 
     <label for="janru">商品選択:</label>
 <select [(ngModel)]="selectedProduct" name="product" required>
@@ -36,11 +36,11 @@
   <option *ngFor="let store of store" [value]="store.id">{{ store.name }}</option>
 </select>
 
-<p class="center-button">
-  <button type="button" class="search-button">検索</button>
+<p div class="center-button">
+  <button type="button" routerLink="/first-component"　class="search-button">検索</button>
 </p>
+</div>
 
-  </div>
   
 <footer>
   <p>&copy; 2025 T書店</p>

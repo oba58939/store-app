@@ -1,1 +1,14 @@
-<p>result works!</p>
+<div>
+    <input [(ngModel)]="searchQuery" placeholder="検索..." />
+    <body>
+        <app-result></app-result> <!-- ここにResultComponentを追加 -->
+      </body>
+      
+    <ul>
+      <li *ngFor="let book of filterProducts()">
+        <h3>{{ book.title }}</h3>
+        <p>著者: {{ book.author }}</p>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
   }
@@ -37,7 +37,7 @@ body {
     padding: 2rem;
   }
   .result-card {
-    background: white;
+    background: #AFB4DB;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -71,7 +71,7 @@ body {
     display: block; /* カード全体をクリック可能に */
   }
   .result-card a:hover {
-    background-color: #f9f9f9; /* ホバー時に背景色を変更 */
+    background-color: #AFB4DB; /* ホバー時に背景色を変更 */
   }
 
 
