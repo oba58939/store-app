@@ -27,7 +27,7 @@
   <div>
 		<label for="storeSelect">店舗選択:</label>
 		<select id="storeSelect" [(ngModel)]="selectedStore">
-		  <option *ngFor="let store of stores" [value]="store.id">
+		  <option *ngFor="let store of store" [value]="store.id">
 			{{ store.name }}
 		  </option>
 		</select>
