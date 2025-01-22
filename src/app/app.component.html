@@ -24,16 +24,16 @@
       <option value=40>画集</option>
       </select>
   </div>
-  <div>
-		<label for="storeSelect">店舗選択:</label>
-		<select id="storeSelect" [(ngModel)]="selectedStore">
-		  <option *ngFor="let store of store" [value]="store.id">
-			{{ store.name }}
-		  </option>
-		</select>
-	  </div>
-  
+  <label for="storeSelect">店舗を選択:</label>
+  <select id="storeSelect" [(ngModel)]="selectedStore" (change)="onStoreSelect(selectedStore)">
+    <option *ngFor="let store of store" [value]="store.id">{{ store.name }}</option>
+  </select>
 
+  <div *ngIf="selectedStore">
+    <p>選択された店舗ID: {{ selectedStore }}</p>
+  </div>
+
+  <app-result></app-result>
 
 <footer>
   <p>&copy; 2025 T書店</p>
